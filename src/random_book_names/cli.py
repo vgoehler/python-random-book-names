@@ -16,11 +16,21 @@ Why does this file exist, and why not put this in __main__?
 """
 import argparse
 
-parser = argparse.ArgumentParser(description='Command description.')
-parser.add_argument('names', metavar='NAME', nargs=argparse.ZERO_OR_MORE,
-                    help="A name of something.")
+
+class CLI:
+    def __init__(self):
+        self.args = None
+
+        self.parser = argparse.ArgumentParser(description='Command description.')
+        self.parser.add_argument('--number', type=int,
+                                 help="The amount of runs.")
+
+    def parse(self, args):
+        self.args = self.parser.parse_args(args)
+        return self.args
 
 
 def main(args=None):
-    args = parser.parse_args(args=args)
+    cli = CLI()
+    args = cli.parse(args=args)
     print(args.names)

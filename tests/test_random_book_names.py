@@ -1,6 +1,7 @@
+from random_book_names.cli import CLI
 
-from random_book_names.cli import main
 
-
-def test_main():
-    main([])
+def test_for_number_parameter():
+    cli = CLI()
+    args = cli.parse(["--number", "20"])
+    assert args.number == 20
