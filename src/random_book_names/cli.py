@@ -16,6 +16,8 @@ Why does this file exist, and why not put this in __main__?
 """
 import argparse
 
+from random_book_names.choser import build_book_title
+
 
 class CLI:
     def __init__(self):
@@ -33,4 +35,4 @@ class CLI:
 def main(args=None):
     cli = CLI()
     args = cli.parse(args=args)
-    print(args.names)
+    print(build_book_title())
