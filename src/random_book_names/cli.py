@@ -16,7 +16,7 @@ Why does this file exist, and why not put this in __main__?
 """
 import argparse
 
-from random_book_names.choser import build_book_title
+from random_book_names.choser import build_library
 
 
 class CLI:
@@ -24,7 +24,7 @@ class CLI:
         self.args = None
 
         self.parser = argparse.ArgumentParser(description='Command description.')
-        self.parser.add_argument('--number', type=int,
+        self.parser.add_argument('--number', type=int, default=1,
                                  help="The amount of runs.")
 
     def parse(self, args):
@@ -35,4 +35,6 @@ class CLI:
 def main(args=None):
     cli = CLI()
     args = cli.parse(args=args)
-    print(build_book_title())
+    books = build_library(args.number)
+    for book in books:
+        print(book)
