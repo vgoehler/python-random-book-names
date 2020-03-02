@@ -25,7 +25,7 @@ def read(*names, **kwargs):
 
 setup(
     name='random-book-names',
-    version='0.0.0',
+    version='0.1.0',
     license='BSD-3-Clause',
     description='A small programm to generate book names from dictionaries.',
     long_description='%s\n%s' % (

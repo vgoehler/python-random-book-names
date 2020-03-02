@@ -42,9 +42,9 @@ Overview
     :alt: Supported implementations
     :target: https://pypi.org/project/random-book-names
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/vgoehler/python-random-book-names/v0.0.0.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/vgoehler/python-random-book-names/v0.1.0.svg
     :alt: Commits since latest release
-    :target: https://github.com/vgoehler/python-random-book-names/compare/v0.0.0...master
+    :target: https://github.com/vgoehler/python-random-book-names/compare/v0.1.0...master
 
 
 
